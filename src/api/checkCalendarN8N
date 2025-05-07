@@ -1,0 +1,30 @@
+{
+  "type": "function",
+  "function": {
+    "name": "checkCalendarN8N",
+    "async": false,
+    "description": "Use this function to check the availabilities in our calendar.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "requestedTime": {
+          "type": "string",
+          "description": "The requested time of the user in the format: YYYY-MM-DDThh:mm:ss"
+        },
+        "calendarId": {
+          "type": "string",
+          "description": "The calendar ID to check",
+          "default": "b3d19683-0f3f-4a61-bb08-3a058fb5b0ab"
+        }
+      },
+      "required": [
+        "requestedTime"
+      ]
+    }
+  },
+  "server": {
+    "url": "https://aboode.app.n8n.cloud/webhook-test/b3d19683-0f3f-4a61-bb08-3a058fb5b0ab",
+    "timeoutSeconds": 30
+  },
+  "async": false
+}
